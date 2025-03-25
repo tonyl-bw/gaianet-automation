@@ -35,8 +35,9 @@ const main = async () => {
 	}
 };
 
-main().then((data) => {
+(async () => {
+	const data = await main();
 	console.log(`Prompt Tokens: ${data.usage.prompt_tokens}`);
 	console.log(`Completion Tokens: ${data.usage.completion_tokens}`);
 	console.log(`Total Tokens: ${data.usage.total_tokens}`);
-});
+})();
