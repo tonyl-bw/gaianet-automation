@@ -12,6 +12,7 @@ A simple Node.js application that automatically sends random general knowledge q
 ## Prerequisites
 
 - Gaia Domains API key
+- Gaia Domain e.g. hkindy.gaia.domains
 
 ## Server Setup
 
@@ -51,6 +52,7 @@ yarn install
 
 3. Configure your environment:
    - Set your Gaia Domains API key in `src/index.js`
+   - Set the BASE_URL e.g. hkindy.gaia.domains
 
 ## Usage
 
