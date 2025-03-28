@@ -30,6 +30,7 @@ const main = async () => {
 		);
 		// console.log(`Question: ${randomQuestion}`);
 		// console.log(`Time taken: ${end - now}ms`);
+		console.log(`Good`);
 		return data;
 	} catch (error) {
 		console.error(error.message);
