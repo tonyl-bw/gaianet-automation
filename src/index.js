@@ -1,5 +1,4 @@
 const axios = require("axios");
-const cron = require("node-cron");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -9,6 +8,7 @@ const API_KEY = process.env.GAIA_API_KEY;
 const questions = JSON.parse(process.env.QUESTIONS);
 
 const main = async () => {
+	const now = performance.now();
 	try {
 		const randomQuestion =
 			questions[Math.floor(Math.random() * questions.length)];
@@ -28,7 +28,8 @@ const main = async () => {
 				},
 			}
 		);
-		console.log(`Question: ${randomQuestion}`);
+		// console.log(`Question: ${randomQuestion}`);
+		// console.log(`Time taken: ${end - now}ms`);
 		return data;
 	} catch (error) {
 		console.error(error.message);
