@@ -9,6 +9,7 @@ const questions = JSON.parse(process.env.QUESTIONS);
 
 const main = async () => {
 	const now = performance.now();
+	console.log(now);
 	try {
 		const randomQuestion =
 			questions[Math.floor(Math.random() * questions.length)];
